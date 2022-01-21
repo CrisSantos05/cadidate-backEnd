@@ -1,16 +1,18 @@
 package com.projetoCadastro.Cadastro.model;
 
+
 import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 
 @Data
+@Document(collection = "candidates")
 @Entity
 public class Course {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
 
     @Column(length = 200, nullable = false)
     private String name;
