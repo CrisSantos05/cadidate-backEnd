@@ -4,12 +4,14 @@ package com.projetoCadastro.Cadastro.model;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Data
 @Document(collection = "candidates")
 @Entity
-public class Course {
+public class Candidate {
 
     @Id
     private String id;
